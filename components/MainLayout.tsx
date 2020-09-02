@@ -3,10 +3,19 @@ import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Head from 'next/head';
 
 function MainLayout({ children }) {
   return (
     <div>
+      <Head>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta
+          name='google-site-verification'
+          content='vB1wqK6_bK58jLO6iJr9uhz42Trvi3ukMEZ7FaK0MGk'
+          data-react-helmet='true'
+        ></meta>
+      </Head>
       <Navbar
         collapseOnSelect
         expand='lg'

@@ -1,7 +1,4 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import fire from '../config/fire-conf';
-import Layout from '../components/MainLayout';
 
 import Link from 'next/link';
 import Sky from '../public/dc-skyline.svg';
@@ -18,6 +15,21 @@ import ContactForm from '../components/Forms';
 const Home = () => {
   return (
     <MainLayout>
+      <Head>
+        <title>
+          Web Marketer, Analyst, Engineer, & Data Science Pro | EvRo.io
+        </title>
+        <link
+          rel='canonical'
+          href='https://www.evro.io/'
+          data-react-helmet='true'
+        ></link>
+        <meta
+          name='description'
+          content='Evro.io is the digital web portfolio for Evan Rosa. Full-stack developer, digital marketer &amp; analyst, and data science professional.'
+          data-react-helmet='true'
+        ></meta>
+      </Head>
       <div className='height-inherit-vh parent-wrapper'>
         <div className='content p-5'>
           <Container>

@@ -29,6 +29,19 @@ const About = () => {
   return (
     <div>
       <Layout>
+        <Head>
+          <title>About | Evan Rosa</title>
+          <link
+            rel='canonical'
+            href='https://www.evro.io/about'
+            data-react-helmet='true'
+          ></link>
+          <meta
+            name='description'
+            content='Evro.io is the digital web portfolio for Evan Rosa. Full-stack developer, digital marketer &amp; analyst, and data science professional.'
+            data-react-helmet='true'
+          ></meta>
+        </Head>
         <Container className='p-5'>
           <Row className='pb-5'>
             <Col xs='12'>
