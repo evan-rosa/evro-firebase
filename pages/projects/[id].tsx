@@ -9,7 +9,7 @@ import Footer from '../../components/Footer';
 import Button from 'react-bootstrap/Button';
 import Link from 'next/link';
 
-const Projects = (props) => {
+const Projects = (props: any) => {
   return (
     <div>
       <Layout>

@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import fire from '../config/fire-conf';
-import Layout from '../components/MainLayout';
+import fire from '../../config/fire-conf';
+import Layout from '../../components/MainLayout';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
 import Button from 'react-bootstrap/Button';
 import Link from 'next/link';
 

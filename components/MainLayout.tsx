@@ -28,7 +28,7 @@ function MainLayout({ children }) {
         >
           <Nav>
             <Nav.Link>
-              <Link href='about'>
+              <Link href='/about'>
                 <a
                   data-gtm-nav-header='about'
                   className='evro-navy-font no-underline'
@@ -39,7 +39,7 @@ function MainLayout({ children }) {
             </Nav.Link>
 
             <Nav.Link>
-              <Link href='projects'>
+              <Link href='/projects'>
                 <a
                   data-gtm-nav-header='projects'
                   className='evro-navy-font no-underline'
@@ -50,7 +50,7 @@ function MainLayout({ children }) {
             </Nav.Link>
 
             <Nav.Link>
-              <Link href='contact'>
+              <Link href='/contact'>
                 <a
                   data-gtm-nav-header='contact'
                   className='evro-navy-font no-underline'
