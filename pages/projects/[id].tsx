@@ -25,7 +25,7 @@ const Projects = (props) => {
               />
               <Row className='pb-5'>
                 <Col>
-                  <Link href='about'>
+                  <Link href={props.url}>
                     <a data-gtm-nav-header='about'>
                       <Button className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'>
                         See Project
@@ -72,6 +72,7 @@ export const getServerSideProps = async ({ query }) => {
       content['image'] = result.data().image;
       content['released'] = result.data().released;
       content['tech'] = result.data().tech;
+      content['url'] = result.data().url;
     });
 
   return {
@@ -82,6 +83,7 @@ export const getServerSideProps = async ({ query }) => {
       image: content.image,
       released: content.released,
       tech: content.tech,
+      url: content.url,
     },
   };
 };
