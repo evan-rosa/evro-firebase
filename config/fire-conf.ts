@@ -1,15 +1,16 @@
 // Your web app's Firebase configuration
 import firebase from 'firebase';
 import 'firebase/storage';
-
+import 'dotenv';
 const firebaseConfig = {
-  apiKey: 'AIzaSyBiosgUplYM4J9DDD0tZ9EV6udQgU89Mt8',
-  authDomain: 'evro-backend.firebaseapp.com',
-  databaseURL: 'https://evro-backend.firebaseio.com',
-  projectId: 'evro-backend',
-  storageBucket: 'evro-backend.appspot.com',
-  messagingSenderId: '795403735260',
-  appId: '1:795403735260:web:7691d3180d4c1c0fe3e419',
+  apiKey: process.env.FB_API_KEY,
+  authDomain: process.env.FB_AUTH_DOMAIN,
+  databaseURL: process.env.FB_DB_URL,
+  projectId: process.env.FB_PROJECT_ID,
+  storageBucket: process.env.FB_STORAGE_BUCKET,
+  messagingSenderId: process.env.FB_MESSAGING_SENDING_ID,
+  appId: process.env.FB_APP_ID,
+  measurementId: process.env.FB_MEASUREMENT_ID,
 };
 // Initialize Firebase
 try {
