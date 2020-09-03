@@ -1,12 +1,12 @@
 // Your web app's Firebase configuration
 import firebase from 'firebase';
 import 'firebase/storage';
-import 'dotenv';
+
 const firebaseConfig = {
   apiKey: process.env.FB_API_KEY,
   authDomain: process.env.FB_AUTH_DOMAIN,
   databaseURL: process.env.FB_DB_URL,
-  projectId: process.env.FB_PROJECT_ID,
+  projectId: 'evro-backend',
   storageBucket: process.env.FB_STORAGE_BUCKET,
   messagingSenderId: process.env.FB_MESSAGING_SENDING_ID,
   appId: process.env.FB_APP_ID,
