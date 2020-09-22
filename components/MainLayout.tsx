@@ -36,38 +36,32 @@ function MainLayout({ children }) {
           className='justify-content-end'
         >
           <Nav>
-            <Nav.Link>
-              <Link href='/about'>
-                <a
-                  data-gtm-nav-header='about'
-                  className='evro-navy-font no-underline'
-                >
-                  About
-                </a>
-              </Link>
-            </Nav.Link>
+            <Link href='/about'>
+              <a
+                data-gtm-nav-header='about'
+                className='evro-navy-font no-underline nav-link'
+              >
+                About
+              </a>
+            </Link>
 
-            <Nav.Link>
-              <Link href='/projects'>
-                <a
-                  data-gtm-nav-header='projects'
-                  className='evro-navy-font no-underline'
-                >
-                  Projects
-                </a>
-              </Link>
-            </Nav.Link>
+            <Link href='/projects'>
+              <a
+                data-gtm-nav-header='projects'
+                className='evro-navy-font no-underline nav-link'
+              >
+                Projects
+              </a>
+            </Link>
 
-            <Nav.Link>
-              <Link href='/contact'>
-                <a
-                  data-gtm-nav-header='contact'
-                  className='evro-navy-font no-underline'
-                >
-                  Contact
-                </a>
-              </Link>
-            </Nav.Link>
+            <Link href='/contact'>
+              <a
+                data-gtm-nav-header='contact'
+                className='evro-navy-font no-underline nav-link'
+              >
+                Contact
+              </a>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

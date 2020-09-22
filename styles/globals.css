@@ -118,6 +118,14 @@ a:hover {
   border-width: 2px !important;
   font-size: 0.81rem !important;
 }
+.evro-navy-btn:hover {
+  background-color: #2c3d5c !important;
+  border-color: #2c3d5c !important;
+  font-weight: bold !important;
+  border-width: 2px !important;
+  font-size: 0.81rem !important;
+  color: #fefefe !important;
+}
 .evro-red-btn {
   border-color: #e2282e !important;
   background-color: transparent !important;

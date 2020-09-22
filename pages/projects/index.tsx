@@ -45,7 +45,15 @@ const Home = () => {
                   {projects.map((projects) => (
                     <Col key={projects.id}>
                       <Card>
-                        <Card.Img variant='top' src={projects.image} />
+                        <Link
+                          href='/projects/[id]'
+                          as={`/projects/${projects.id}`}
+                        >
+                          <a data-internal='internal-project-button-click'>
+                            <Card.Img variant='top' src={projects.image} />
+                          </a>
+                        </Link>
+
                         <Card.Body className='text-center'>
                           <Card.Title>{projects.title}</Card.Title>
                           <Card.Text>{projects.headline}</Card.Text>
@@ -55,7 +63,7 @@ const Home = () => {
                             as={`/projects/${projects.id}`}
                           >
                             <a data-internal='internal-project-button-click'>
-                              <Button className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'>
+                              <Button className='evro-navy-btn btn-evro-navy-outline pt-2 pb-2 pl-4 pr-4'>
                                 View Project Details
                               </Button>{' '}
                             </a>

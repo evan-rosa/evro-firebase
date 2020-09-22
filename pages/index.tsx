@@ -19,15 +19,10 @@ const Home = () => {
         <title>
           Web Marketer, Analyst, Engineer, & Data Science Pro | EvRo.io
         </title>
-        <link
-          rel='canonical'
-          href='https://www.evro.io/'
-          data-react-helmet='true'
-        ></link>
+        <link rel='canonical' href='https://www.evro.io/'></link>
         <meta
           name='description'
-          content='Evro.io is the digital web portfolio for Evan Rosa. Full-stack developer, digital marketer &amp; analyst, and data science professional.'
-          data-react-helmet='true'
+          content='Evro.io is the digital web portfolio for Evan Rosa. Full-stack developer, digital marketer &amp; analyst pro, and data science enthusiast.'
         ></meta>
       </Head>
       <div className='height-inherit-vh parent-wrapper'>

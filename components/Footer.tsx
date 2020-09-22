@@ -41,7 +41,7 @@ const Footer = () => {
                   {' '}
                   ReactJS.org{' '}
                 </a>
-                , and
+                ,
                 <a
                   href='https://nextjs.org/'
                   target='_blank'
@@ -50,6 +50,16 @@ const Footer = () => {
                 >
                   {' '}
                   NextJS.org{' '}
+                </a>
+                , and
+                <a
+                  href='https://www.typescriptlang.org/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='evro-white-font no-underline'
+                >
+                  {' '}
+                  TypeScript{' '}
                 </a>
               </Col>
             </Row>
