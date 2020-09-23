@@ -17,12 +17,13 @@ const Home = () => {
     <MainLayout>
       <Head>
         <title>
-          Web Marketer, Analyst, Engineer, & Data Science Pro | EvRo.io
+          Evan Rosa | Digital Marketer & Analyst, Engineer, and Data Science
+          Enthusiast
         </title>
         <link rel='canonical' href='https://www.evro.io/'></link>
         <meta
           name='description'
-          content='Evro.io is the digital web portfolio for Evan Rosa. Full-stack developer, digital marketer &amp; analyst pro, and data science enthusiast.'
+          content='Evan Rosa | Digital Marketer & Analyst, Engineer, and Data Science Enthusiast.'
         ></meta>
       </Head>
       <div className='height-inherit-vh parent-wrapper'>
@@ -37,9 +38,10 @@ const Home = () => {
                       <span className='evro-red-font'>EvRo</span>
                     </h1>
                     <p className='lead'>
-                      Experienced web developer, web marketer & analyst, and
-                      data scientist. Building complex web applications while
-                      using data to improve user experience.
+                      I'm an experienced web developer, web marketer & analyst,
+                      and data science enthusiast. I basically enjoy building
+                      web applications but I use data to improve user
+                      experience.
                     </p>
                   </Col>
                 </Row>

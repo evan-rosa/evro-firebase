@@ -30,7 +30,7 @@ const About = () => {
     <div>
       <Layout>
         <Head>
-          <title>About | Evan Rosa</title>
+          <title>Evan Rosa | About Me</title>
           <link
             rel='canonical'
             href='https://www.evro.io/about'
@@ -38,7 +38,7 @@ const About = () => {
           ></link>
           <meta
             name='description'
-            content='Evro.io is the digital web portfolio for Evan Rosa. Full-stack developer, digital marketer &amp; analyst, and data science professional.'
+            content='Hi, I am Evan Rosa. I am an analytics and development professional and I enjoy exploring the digital world.'
             data-react-helmet='true'
           ></meta>
         </Head>
@@ -47,11 +47,11 @@ const About = () => {
             <Col xs='12'>
               <h1 className='h1'>About Evan Rosa</h1>
               <p className='h5-responsive'>
-                Hi, I'm Evan Rosa! I create digital experiences while utilizing
-                marketing and data to understand the user’s journey. Based in
-                the Washington D.C. area, I’m currently a Booz Allen Hamilton
-                Associate, with over 10 years of professional experience,
-                leading web analytic efforts for federal health web properties.
+                Hi, I'm Evan Rosa! I enjoy exploring the digital world and using
+                data to improve the user’s journey. Based in the Washington D.C.
+                metro area, I’m currently a Reporting Engineer with Digital
+                Turbine, with over 10 years of professional experience, leading
+                web analytic efforts on app and web environments.
               </p>
               <Link href='https://storage.googleapis.com/evro-backend.appspot.com/resume/kelva0n53pqcwmkygti/resume/resume-2020.pdf'>
                 <a data-gtm-nav-header='about'>

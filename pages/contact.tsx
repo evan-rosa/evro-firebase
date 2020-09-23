@@ -14,7 +14,7 @@ const Home = () => {
     <div>
       <Layout>
         <Head>
-          <title>Contact Evan Rosa</title>
+          <title>Evan Rosa | Contact</title>
           <link rel='canonical' href='https://www.evro.io/contact'></link>
           <meta
             name='description'

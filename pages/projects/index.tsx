@@ -28,13 +28,22 @@ const Home = () => {
   return (
     <div>
       <Layout>
+        <Head>
+          <title>Evan Rosa | Digital Project Portfolio</title>
+          <link rel='canonical' href='https://www.evro.io/projects'></link>
+          <meta
+            name='description'
+            content='Want to know what Evan Rosa has been working on? Check out his digital project portfolio.'
+          ></meta>
+        </Head>
         <Container className='p-5'>
           <Row className='pb-3'>
             <Col>
-              <h1>Evan Rosa's Project Portfolio</h1>
+              <h1>Evan Rosa's Digital Project Portfolio</h1>
               <p className='lead'>
-                Here are just a few featured projects I’ve worked on outside of
-                federal government consulting.
+                If you're interested in knowing what I've been working on
+                outside of my day job. Take a look at some of these projects
+                I've worked on with more to come.
               </p>
             </Col>
           </Row>
