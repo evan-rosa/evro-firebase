@@ -1,16 +1,10 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import fire from '../config/fire-conf';
 import Layout from '../components/MainLayout';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
-import Button from 'react-bootstrap/Button';
-import Link from 'next/link';
 import Typed from 'react-typed';
 import City from '../public/dc-map.svg';
 import '../styles/Contact.module.css';
@@ -19,6 +13,14 @@ const Home = () => {
   return (
     <div>
       <Layout>
+        <Head>
+          <title>Contact Evan Rosa</title>
+          <link rel='canonical' href='https://www.evro.io/contact'></link>
+          <meta
+            name='description'
+            content='If you have any questions please feel free to contact Evan Rosa.'
+          ></meta>
+        </Head>
         <Container className='p-5'>
           <Row>
             <Col>
