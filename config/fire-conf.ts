@@ -27,7 +27,7 @@ const firebaseConfigLive = {
 };
 // Initialize Firebase
 try {
-  if (process.env.GCP_PROJECT === 'evro-backend-sandbox') {
+  if (process.env.GCP_PROJECT === 'evro-backend') {
     firebase.initializeApp(firebaseConfigSandbox);
     firebase.storage();
   } else {
