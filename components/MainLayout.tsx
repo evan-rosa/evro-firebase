@@ -13,7 +13,6 @@ function MainLayout({ children }) {
         <meta
           name='google-site-verification'
           content='vB1wqK6_bK58jLO6iJr9uhz42Trvi3ukMEZ7FaK0MGk'
-          data-react-helmet='true'
         ></meta>
       </Head>
       <Navbar
@@ -25,7 +24,7 @@ function MainLayout({ children }) {
       >
         <Navbar.Brand>
           <Link href='/'>
-            <a data-gtm-nav-header='about' className='no-underline'>
+            <a className='no-underline' data-gtm-head='logo'>
               <strong className='App-logo'>EVRO</strong>
             </a>
           </Link>
@@ -38,8 +37,8 @@ function MainLayout({ children }) {
           <Nav>
             <Link href='/about'>
               <a
-                data-gtm-nav-header='about'
                 className='evro-navy-font no-underline nav-link'
+                data-gtm-head='about'
               >
                 About
               </a>
@@ -47,8 +46,8 @@ function MainLayout({ children }) {
 
             <Link href='/projects'>
               <a
-                data-gtm-nav-header='projects'
                 className='evro-navy-font no-underline nav-link'
+                data-gtm-head='projects'
               >
                 Projects
               </a>
@@ -56,8 +55,8 @@ function MainLayout({ children }) {
 
             <Link href='/contact'>
               <a
-                data-gtm-nav-header='contact'
                 className='evro-navy-font no-underline nav-link'
+                data-gtm-head='contact'
               >
                 Contact
               </a>

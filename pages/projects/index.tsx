@@ -58,7 +58,7 @@ const Home = () => {
                           href='/projects/[id]'
                           as={`/projects/${projects.id}`}
                         >
-                          <a data-internal='internal-project-button-click'>
+                          <a>
                             <Card.Img variant='top' src={projects.image} />
                           </a>
                         </Link>
@@ -71,8 +71,11 @@ const Home = () => {
                             href='/projects/[id]'
                             as={`/projects/${projects.id}`}
                           >
-                            <a data-internal='internal-project-button-click'>
-                              <Button className='evro-navy-btn btn-evro-navy-outline pt-2 pb-2 pl-4 pr-4'>
+                            <a>
+                              <Button
+                                data-gtm-button='project details'
+                                className='evro-navy-btn btn-evro-navy-outline pt-2 pb-2 pl-4 pr-4'
+                              >
                                 View Project Details
                               </Button>{' '}
                             </a>

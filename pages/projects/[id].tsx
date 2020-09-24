@@ -26,8 +26,11 @@ const Projects = (props: any) => {
               <Row className='pb-5'>
                 <Col>
                   <Link href={props.url}>
-                    <a data-gtm-nav-header='about'>
-                      <Button className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'>
+                    <a>
+                      <Button
+                        data-gtm-button='See Project'
+                        className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'
+                      >
                         See Project
                       </Button>{' '}
                     </a>
@@ -48,7 +51,11 @@ const Projects = (props: any) => {
               />
             </Col>
             <Col md='6'>
-              <img src={props.image} alt='#' />
+              <Link href={props.url}>
+                <a data-gtm-button='Project Image'>
+                  <img src={props.image} alt='Project Image' />
+                </a>
+              </Link>
             </Col>
           </Row>
         </Container>

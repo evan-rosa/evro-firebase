@@ -34,6 +34,7 @@ function ContactForm() {
         </Form.Group>
       </Form>
       <Button
+        data-gtm-button='contact form'
         className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'
         onClick={() => Router.push('/thank-you')}
       >

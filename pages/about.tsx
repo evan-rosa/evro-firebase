@@ -31,15 +31,10 @@ const About = () => {
       <Layout>
         <Head>
           <title>Evan Rosa | About Me</title>
-          <link
-            rel='canonical'
-            href='https://www.evro.io/about'
-            data-react-helmet='true'
-          ></link>
+          <link rel='canonical' href='https://www.evro.io/about'></link>
           <meta
             name='description'
             content='Hi, I am Evan Rosa. I am an analytics and development professional and I enjoy exploring the digital world.'
-            data-react-helmet='true'
           ></meta>
         </Head>
         <Container className='p-5'>
@@ -54,8 +49,11 @@ const About = () => {
                 web analytic efforts on app and web environments.
               </p>
               <Link href='https://storage.googleapis.com/evro-backend.appspot.com/resume/kelva0n53pqcwmkygti/resume/resume-2020.pdf'>
-                <a data-gtm-nav-header='about'>
-                  <Button className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'>
+                <a>
+                  <Button
+                    className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'
+                    data-gtm-button='Download Resume'
+                  >
                     Download My Resume
                   </Button>{' '}
                 </a>
@@ -133,8 +131,11 @@ const About = () => {
           <Row>
             <Col md='12'>
               <Link href='contact'>
-                <a data-gtm-nav-header='contact'>
-                  <Button className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'>
+                <a>
+                  <Button
+                    className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'
+                    data-gtm-button='contact'
+                  >
                     Contact
                   </Button>{' '}
                 </a>

@@ -48,8 +48,11 @@ const Home = () => {
                 <Row>
                   <Col>
                     <Link href='about'>
-                      <a data-gtm-nav-header='about'>
-                        <Button className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'>
+                      <a>
+                        <Button
+                          className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'
+                          data-gtm-button='Learn More About Evan Rosa'
+                        >
                           Learn More About Evan Rosa
                         </Button>{' '}
                       </a>
