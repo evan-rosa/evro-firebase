@@ -27,13 +27,10 @@ const firebaseConfigLive = {
 };
 // Initialize Firebase
 try {
-  if (process.env.GCP_PROJECT === 'evro-backend') {
-    firebase.initializeApp(firebaseConfigSandbox);
-    firebase.storage();
-  } else {
-    firebase.initializeApp(firebaseConfigLive);
-    firebase.storage();
-  }
+  firebase.initializeApp(firebaseConfigSandbox);
+
+  firebase.initializeApp(firebaseConfigLive);
+  firebase.storage();
 } catch (err) {
   if (!/already exists/.test(err.message)) {
     console.error('Firebase initialization error', err.stack);
