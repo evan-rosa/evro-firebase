@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 import Link from 'next/link';
 import Sky from '../public/dc-skyline.svg';
@@ -15,14 +15,11 @@ import ContactForm from '../components/Forms';
 const Home = () => {
   return (
     <MainLayout>
-      <Head>
-        <title>Evan Rosa | Analytics Engineer and Data Science Enthusiast</title>
-        <link rel='canonical' href='https://www.evro.io/'></link>
-        <meta
-          name='description'
-          content='Evan Rosa, an engineer improving the digital experience and ROI through data'
-        ></meta>
-      </Head>
+      <NextSeo 
+        title="Evan Rosa | Analytics Engineer and Data Science Enthusiast"
+        description="Evan Rosa, an engineer improving the digital experience and ROI through data"
+        canonical='https://evan-rosa.com'
+      />
       <div className='height-inherit-vh parent-wrapper'>
         <div className='content p-5'>
           <Container>

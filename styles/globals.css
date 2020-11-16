@@ -175,6 +175,9 @@ a:hover {
   font-family: 'Francois One', 'Roboto', Helvetica, Arial, sans-serif !important;
   color: #2c3d5c;
 }
+.App-logo:hover {
+  color: #e2282e;
+}
 .bring-to-front {
   z-index: 10;
   position: relative;

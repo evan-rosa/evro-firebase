@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Layout from '../components/MainLayout';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -13,14 +13,11 @@ const Home = () => {
   return (
     <div>
       <Layout>
-        <Head>
-          <title>Evan Rosa | Contact</title>
-          <link rel='canonical' href='https://www.evro.io/contact'></link>
-          <meta
-            name='description'
-            content='If you have any questions please feel free to contact Evan Rosa.'
-          ></meta>
-        </Head>
+        <NextSeo 
+          title="Contact Evan Rosa"
+          description="If you have any questions please feel free to contact Evan Rosa."
+          canonical='https://evan-rosa.com/contact'
+        />
         <Container className='p-5'>
           <Row>
             <Col>

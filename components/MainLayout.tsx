@@ -25,9 +25,9 @@ function MainLayout({ children }) {
         >
           <Navbar.Brand>
             <Link href='/'>
-              <h1 className='no-underline App-logo' data-gtm-head='logo'>
+              <h1><a className='no-underline App-logo' data-gtm-head='logo'>
                 <span className='font-weight-lighter'>Evan</span> Rosa
-              </h1>
+              </a></h1>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import { useState, useEffect } from 'react';
 import fire from '../../config/fire-conf';
 import Layout from '../../components/MainLayout';
@@ -28,14 +28,11 @@ const Home = () => {
   return (
     <div>
       <Layout>
-        <Head>
-          <title>Evan Rosa's Digital Project Portfolio</title>
-          <link rel='canonical' href='https://www.evro.io/projects'></link>
-          <meta
-            name='description'
-            content='Want to know what Evan Rosa has been working on? Check out my digital project portfolio.'
-          ></meta>
-        </Head>
+        <NextSeo 
+          title="Evan Rosa's Digital Project Portfolio"
+          description="Want to know what Evan Rosa has been working on? Check out my digital project portfolio."
+          canonical='https://evan-rosa.com/projects'
+        />
        <section>
         <Container className='p-5'>
             <Row className='pb-3'>

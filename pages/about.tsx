@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo, SocialProfileJsonLd } from 'next-seo';
 import { useState, useEffect } from 'react';
 import fire from '../config/fire-conf';
 import Layout from '../components/MainLayout';
@@ -29,14 +29,21 @@ const About = () => {
   return (
     <div>
       <Layout>
-        <Head>
-          <title>About Evan Rosa, Washington DC based Analytics Engineer</title>
-          <link rel='canonical' href='https://www.evro.io/about'></link>
-          <meta
-            name='description'
-            content='About Evan Rosa, DC based Analytics Engineer with an expertise with Google Analytics, Tag Manager, and Big Query.'
-          ></meta>
-        </Head>
+        <NextSeo 
+        title="About Evan Rosa, Washington DC based Analytics Engineer"
+        description="About Evan Rosa, DC based Analytics Engineer with an expertise with Google Analytics, Tag Manager, and Big Query."
+        canonical='https://evan-rosa.com/about'
+      />
+      <SocialProfileJsonLd
+      type="Person"
+      name="Evan Rosa"
+      url="https://evan-rosa.com"
+      sameAs={[
+        'https://www.linkedin.com/in/evan-rosa/',
+        'https://www.instagram.com/_evro/',
+        'https://github.com/evan-rosa',
+      ]}
+    />
         <section>
           <Container className='p-5'>
             <Row className='pb-5'>

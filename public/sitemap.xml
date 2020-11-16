@@ -3,7 +3,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>
-			https://www.evro.io/
+			https://evan-rosa.com/
 		</loc>
 		<lastmod>
 			2020-01-07
@@ -17,7 +17,7 @@
 	</url>
 	<url>
 		<loc>
-			https://www.evro.io/about/
+			https://evan-rosa.com/about/
 		</loc>
 		<lastmod>
 			2020-01-07
@@ -31,7 +31,7 @@
 	</url>
 	<url>
 		<loc>
-			https://www.evro.io/contact/
+			https://evan-rosa.com/contact/
 		</loc>
 		<lastmod>
 			2020-01-07
@@ -45,7 +45,7 @@
 	</url>
 	<url>
 		<loc>
-			https://www.evro.io/projects
+			https://evan-rosa.com/projects
 		</loc>
 		<lastmod>
 			2020-01-07
