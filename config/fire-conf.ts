@@ -28,8 +28,6 @@ const firebaseConfigLive = {
 // Initialize Firebase
 try {
   firebase.initializeApp(firebaseConfigSandbox);
-
-  firebase.initializeApp(firebaseConfigLive, 'secondary');
   firebase.storage();
 } catch (err) {
   if (!/already exists/.test(err.message)) {
