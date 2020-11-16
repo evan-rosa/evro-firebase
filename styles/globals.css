@@ -172,11 +172,7 @@ a:hover {
 }
 
 .App-logo {
-  width: 10rem;
   font-family: 'Francois One', 'Roboto', Helvetica, Arial, sans-serif !important;
-  width: 100%;
-  height: 100%;
-  font-size: 5vh;
   color: #2c3d5c;
 }
 .bring-to-front {
@@ -185,6 +181,12 @@ a:hover {
 }
 .width-100 {
   width: 100%;
+}
+.remove-bold {
+  font-weight: 300 !important;
+}
+.remove-margin {
+  margin: 0 !important;
 }
 /*Navigation*/
 .nav-link {

@@ -29,7 +29,7 @@ const firebaseConfigLive = {
 try {
   firebase.initializeApp(firebaseConfigSandbox);
 
-  firebase.initializeApp(firebaseConfigLive);
+  firebase.initializeApp(firebaseConfigLive, 'secondary');
   firebase.storage();
 } catch (err) {
   if (!/already exists/.test(err.message)) {

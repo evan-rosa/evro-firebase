@@ -15,55 +15,57 @@ function MainLayout({ children }) {
           content='vB1wqK6_bK58jLO6iJr9uhz42Trvi3ukMEZ7FaK0MGk'
         ></meta>
       </Head>
-      <Navbar
-        collapseOnSelect
-        expand='lg'
-        bg='white'
-        sticky='top'
-        className='shadow-sm bg-white'
-      >
-        <Navbar.Brand>
-          <Link href='/'>
-            <a className='no-underline' data-gtm-head='logo'>
-              <strong className='App-logo'>EVRO</strong>
-            </a>
-          </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-        <Navbar.Collapse
-          id='responsive-navbar-nav'
-          className='justify-content-end'
+      <header role='banner'>
+        <Navbar
+          collapseOnSelect
+          expand='lg'
+          bg='white'
+          sticky='top'
+          className='shadow-sm bg-white'
         >
-          <Nav>
-            <Link href='/about'>
-              <a
-                className='evro-navy-font no-underline nav-link'
-                data-gtm-head='about'
-              >
-                About
-              </a>
+          <Navbar.Brand>
+            <Link href='/'>
+              <h1 className='no-underline App-logo' data-gtm-head='logo'>
+                <span className='font-weight-lighter'>Evan</span> Rosa
+              </h1>
             </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse
+            id='responsive-navbar-nav'
+            className='justify-content-end'
+          >
+            <Nav>
+              <Link href='/about'>
+                <a
+                  className='evro-navy-font no-underline nav-link'
+                  data-gtm-head='about'
+                >
+                  About
+                </a>
+              </Link>
 
-            <Link href='/projects'>
-              <a
-                className='evro-navy-font no-underline nav-link'
-                data-gtm-head='projects'
-              >
-                Projects
-              </a>
-            </Link>
+              <Link href='/projects'>
+                <a
+                  className='evro-navy-font no-underline nav-link'
+                  data-gtm-head='projects'
+                >
+                  Projects
+                </a>
+              </Link>
 
-            <Link href='/contact'>
-              <a
-                className='evro-navy-font no-underline nav-link'
-                data-gtm-head='contact'
-              >
-                Contact
-              </a>
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+              <Link href='/contact'>
+                <a
+                  className='evro-navy-font no-underline nav-link'
+                  data-gtm-head='contact'
+                >
+                  Contact
+                </a>
+              </Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </header>
       <Container fluid>
         <main>{children}</main>
       </Container>

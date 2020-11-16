@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import * as React from 'react';
 import flush from 'styled-jsx/server';
 import { GtagNoscript, GtagScript } from '../src/gtag';
@@ -8,7 +8,7 @@ class MyDocument extends Document {
     const { pageContext } = this.props;
 
     return (
-      <html lang='en' dir='ltr'>
+      <Html lang='en' dir='ltr'>
         <Head>
           <meta charSet='utf-8' />
           <GtagScript />
@@ -18,7 +18,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

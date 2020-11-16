@@ -16,14 +16,11 @@ const Home = () => {
   return (
     <MainLayout>
       <Head>
-        <title>
-          Evan Rosa | Digital Marketer & Analyst, Engineer, and Data Science
-          Enthusiast
-        </title>
+        <title>Evan Rosa | Analytics Engineer and Data Science Enthusiast</title>
         <link rel='canonical' href='https://www.evro.io/'></link>
         <meta
           name='description'
-          content='Evan Rosa | Digital Marketer & Analyst, Engineer, and Data Science Enthusiast.'
+          content='Evan Rosa, an engineer improving the digital experience and ROI through data'
         ></meta>
       </Head>
       <div className='height-inherit-vh parent-wrapper'>
@@ -33,16 +30,7 @@ const Home = () => {
               <Col md='6'>
                 <Row>
                   <Col>
-                    <h1>
-                      Hi, I'm Evan Rosa |{' '}
-                      <span className='evro-red-font'>EvRo</span>
-                    </h1>
-                    <p className='lead'>
-                      I'm an experienced web developer, web marketer & analyst,
-                      and data science enthusiast. I basically enjoy building
-                      web applications but I use data to improve user
-                      experience.
-                    </p>
+                    <h1 className="h2 remove-bold">Improving the <span className="evro-red-font"><strong>digital experience</strong></span> and <span className="evro-red-font"><strong>ROI</strong></span> through data.</h1>
                   </Col>
                 </Row>
                 <Row>
@@ -53,7 +41,7 @@ const Home = () => {
                           className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'
                           data-gtm-button='Learn More About Evan Rosa'
                         >
-                          Learn More About Evan Rosa
+                          <h2 className="h6 remove-margin pt-2 pb-2"><strong>Learn More About Evan Rosa</strong></h2>
                         </Button>{' '}
                       </a>
                     </Link>
