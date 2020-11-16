@@ -42,6 +42,7 @@ const About = () => {
         'https://www.linkedin.com/in/evan-rosa/',
         'https://www.instagram.com/_evro/',
         'https://github.com/evan-rosa',
+        'https://medium.com/@Evan_Rosa/about',
       ]}
     />
         <section>
