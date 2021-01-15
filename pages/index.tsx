@@ -5,12 +5,18 @@ import Sky from '../public/dc-skyline.svg';
 
 import '../styles/Home.module.css';
 
-import MainLayout from '../components/MainLayout';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ContactForm from '../components/Forms';
+import dynamic from 'next/dynamic';
+
+const ContactForm = dynamic(() => import('../components/Forms'), {
+  loading: () => <p>Loading...</p>
+});
+const MainLayout = dynamic(() => import('../components/MainLayout'), {
+  loading: () => <p>Loading...</p>
+});
 
 const Home = () => {
   return (
@@ -26,8 +32,9 @@ const Home = () => {
             <Row className='bring-to-front'>
               <Col md='6'>
                 <Row>
-                  <Col>
-                    <h1 className="h2 remove-bold">Improving the <span className="evro-red-font"><strong>digital experience</strong></span> and <span className="evro-red-font"><strong>ROI</strong></span> through data.</h1>
+                  <Col md='12'>
+                    <h2 className="h2">Enhancing the <span className="evro-red-font">digital experience</span> and <span className="evro-red-font">improving ROI</span> through data.</h2>
+                    <p className='lead'>Google Analytics expert that can help you maximize your Digital Marketing and Analytics efforts.</p>
                   </Col>
                 </Row>
                 <Row>
@@ -35,10 +42,10 @@ const Home = () => {
                     <Link href='about'>
                       <a>
                         <Button
-                          className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'
+                          className='evro-navy-btn pt-2 pb-2 pl-4 pr-4 mb-4'
                           data-gtm-button='Learn More About Evan Rosa'
                         >
-                          <h2 className="h6 remove-margin pt-2 pb-2"><strong>Learn More About Evan Rosa</strong></h2>
+                          <p className="remove-margin pt-1 pb-1"><strong>Learn More About Evan Rosa</strong></p>
                         </Button>{' '}
                       </a>
                     </Link>
@@ -53,7 +60,7 @@ const Home = () => {
         </div>
 
         <div className='child-wrapper'>
-          <img className='home-hero' src={Sky} />
+          <img alt='Washington DC' className='home-hero' src={Sky} />
         </div>
       </div>
     </MainLayout>

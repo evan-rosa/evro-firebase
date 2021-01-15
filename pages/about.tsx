@@ -49,9 +49,9 @@ const About = () => {
           <Container className='p-5'>
             <Row className='pb-5'>
               <Col xs='12'>
-                <h1 className='h1'>Hey, I'm Evan Rosa</h1>
-                <p className='h5-responsive'>
-                  I enjoy exploring the digital world and using data to improve the our experiences online. With over 10 years of professional experience using Google Analytics and Tag Manager, I’m currently a Reporting Analytics Engineer with Digital Turbine working on web and app user tracking.</p>
+                <h1 className='h1'>About Evan Rosa</h1>
+                <p className='lead'>
+                  Evan Rosa enjoys exploring the digital world and using data to improve digital experiences. Over the last ten years he has been implementing, managing, and auditing Analytic Architectures for various non-profits, government agencies (as a consultant), and private companies in the Washington DC Metro area. His "bread and butter" covers the Google Marketing Platform using tools like Google Analytics, Google Tag Manager, BigQuery, and Data Studio. At the present moment, Evan is currently working as a Reporting Analytics Engineer with Digital Turbine working on web and app tracking initiatives.</p>
                 <Link href='https://storage.googleapis.com/evro-backend.appspot.com/resume/kelva0n53pqcwmkygti/resume/resume-2020.pdf'>
                   <a>
                     <Button

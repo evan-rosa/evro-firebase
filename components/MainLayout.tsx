@@ -4,8 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Head from 'next/head';
+import { useRouter } from 'next/router'
 
 function MainLayout({ children }) {
+  const router = useRouter()
   return (
     <div>
       <Head>
@@ -24,10 +26,12 @@ function MainLayout({ children }) {
           className='shadow-sm bg-white'
         >
           <Navbar.Brand>
-            <Link href='/'>
-              <h1><a className='no-underline App-logo' data-gtm-head='logo'>
+            <Link href='https://evan-rosa.com'>
+              {router.pathname === '/' ? (<h1 className="h1"><div className='no-underline App-logo' data-gtm-head='logo'>
                 <span className='font-weight-lighter'>Evan</span> Rosa
-              </a></h1>
+              </div></h1>) : (<p className="h1"><div className='no-underline App-logo' data-gtm-head='logo'>
+                <span className='font-weight-lighter'>Evan</span> Rosa
+              </div></p>)}
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
