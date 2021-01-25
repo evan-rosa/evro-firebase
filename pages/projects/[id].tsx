@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import fire from '../../config/fire-conf';
+import fire from '../../firebase/fire-conf';
 import Layout from '../../components/MainLayout';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

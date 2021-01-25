@@ -12,6 +12,7 @@ class MyDocument extends Document {
         <Head>
           <meta charSet='utf-8' />
           <GtagScript />
+          <script data-ad-client="ca-pub-7316619856303216" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
         <body>
           <GtagNoscript />
