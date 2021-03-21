@@ -29,7 +29,7 @@ const emailAPI = function(event, context, callback) {
     service: "gmail",
     auth: {
           type: "OAuth2",
-          user: "erosa26@gmail.com", 
+          user: "evandanrosa@gmail.com", 
           clientId: process.env.GMAIL_CLIENT_ID,
           clientSecret: process.env.GMAIL_SECRET,
           refreshToken: process.env.REFRESH_TOKEN,
@@ -38,8 +38,8 @@ const emailAPI = function(event, context, callback) {
   });
 
   const mailOptions = {
-    from: "erosa26@gmail.com",
-    to: "erosa26@gmail.com",
+    from: "evandanrosa@gmail.com",
+    to: "evandanrosa@gmail.com",
     subject: dataParsed.subject,
     generateTextFromHTML: true,
     html: `
@@ -57,9 +57,10 @@ const emailAPI = function(event, context, callback) {
         body: JSON.stringify({
                'result': 'success'
             })
-    });
+      });
     }
-});
+  });
 }
 
 export default emailAPI;
+

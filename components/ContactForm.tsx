@@ -9,80 +9,80 @@ function ContactForm() {
   const [state, setState] = useState({name: '', email: '', subject: '', message:'', sent: false, buttonText: 'Submit', err: ''} );
 
 
- const handleChange = (e) => {
-  const {name, value} = e.target
-      setState({
-          ...state,
-          [name]: value
-  })
-};
+  const handleChange = (e) => {
+    const {name, value} = e.target
+        setState({
+            ...state,
+            [name]: value
+    })
+  };
 
-const resetForm = () => {
-  setState({
-      name: '',
-      email: '',
-      message: '',
-      subject: '',
-      sent: false,
-      buttonText: 'Submit',
-      err: ''
-  });
-};
+  const resetForm = () => {
+    setState({
+        name: '',
+        email: '',
+        message: '',
+        subject: '',
+        sent: false,
+        buttonText: 'Submit',
+        err: ''
+    });
+  };
 
-const formSubmit = (e) => {
-  e.preventDefault();
+  const formSubmit = (e) => {
+    e.preventDefault();
 
-  setState({
-      ...state,
-      buttonText: 'Sending...'
-  })
+    setState({
+        ...state,
+        buttonText: 'Sending...'
+    })
 
-  axios.post('/api/sendEmail', state)
-  .then(res => {
-      if(res.data.result !=='success') {
-          setState({
-              ...state,
-              buttonText: 'Failed to send',
-              sent: false,
-              err: 'fail'
-          })
-          setTimeout(() => {
-              resetForm()
-          }, 6000)        
-      } else {
-          setState({
-              ...state,
-              sent: true,
-              buttonText: 'Sent',
-              err: 'success'
-          })
-          setTimeout(() => {
-              resetForm();
-              Router.push('/thank-you')
-          }, 6000)
-      }
-  }).catch( (err) => {
-      setState({
-          ...state,
-          buttonText: 'Failed to send',
-          err: 'fail'
-      })
-  })
-};
+    axios.post('/api/sendEmail', state)
+    .then(res => {
+        if(res.data.result !=='success') {
+            setState({
+                ...state,
+                buttonText: 'Failed to send',
+                sent: false,
+                err: 'fail'
+            })
+            setTimeout(() => {
+                resetForm()
+            }, 6000)        
+        } else {
+            setState({
+                ...state,
+                sent: true,
+                buttonText: 'Sent',
+                err: 'success'
+            })
+            setTimeout(() => {
+                resetForm();
+                Router.push('/thank-you')
+            }, 6000)
+        }
+    }).catch( (err) => {
+        setState({
+            ...state,
+            buttonText: 'Failed to send',
+            err: 'fail'
+        })
+    })
+  };
 
   return (
     <div>
       <Form>
-        <Form.Group>
+        <Form.Group className="pb-3">
           <Form.Control required type='text' placeholder='Name' name="name" value={state.name} onChange={handleChange} />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="pb-3">
           <Form.Control required type='text' placeholder='Email' name="email" value={state.email} onChange={handleChange}/>
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="pb-3">
           <Form.Control required type='text' placeholder='Subject' name="subject" value={state.subject} onChange={handleChange} />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="pb-3">
           <Form.Control required type='rich-text' placeholder='Message' name="message" value={state.message} onChange={handleChange} />
         </Form.Group>
       </Form>
