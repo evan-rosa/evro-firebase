@@ -1,5 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
+import axios from 'axios';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -8,41 +9,93 @@ import Router from 'next/router';
 function ContactForm() {
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  })
+  const [inputs, setInputs] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg },
+      })
+      setInputs({
+        name: '',
+        email: '',
+        message: '',
+      })
+    } 
+  }
 
-    setValidated(true);
-  };
+  const handleOnChange = (e) => {
+    e.persist()
+    setInputs((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }))
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
+    })
+  }
+  const handleOnSubmit = (e) => {
+    e.preventDefault()
+    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }))
+    axios({
+      method: 'POST',
+      url: 'https://formspree.io/f/xoqyajnl',
+      data: inputs,
+    })
+      .then((response) => {
+        handleServerResponse(
+          true,
+          ''
+        )
+        //resetForm();
+        Router.push('/thank-you')
+      })
+      .catch((error) => {
+        handleServerResponse(false, error.response.data.error)
+      })
+  }
 
   return (
     <Card border='light' className='shadow bg-white'>
       <Card.Header>Have A Question?</Card.Header>
       <Card.Body>
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
-          <Form.Group>
-            <Form.Control required type='text' placeholder='Name' />
-          </Form.Group>
-          <Form.Group>
-            <Form.Control required type='text' placeholder='Email' />
-          </Form.Group>
-          <Form.Group>
-            <Form.Control required type='text' placeholder='Subject' />
-          </Form.Group>
-          <Form.Group>
-            <Form.Control required type='rich-text' placeholder='Message' />
-          </Form.Group>
-        </Form>
-        <Button
-          data-gtm-button='Send Form - Have a Question?'
-          className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'
-          onClick={() => Router.push('/thank-you')}
-        >
-          Send
+      <form onSubmit={handleOnSubmit}>
+        <Form.Group className="pb-3">
+            <Form.Control required id="name" type='text' placeholder='Name' name="name" value={inputs.name} onChange={handleOnChange} />
+        </Form.Group>
+
+        <Form.Group className="pb-3">
+            <Form.Control required id="email" type="email" placeholder='Email' name="_replyto" value={inputs.email} onChange={handleOnChange} />
+        </Form.Group>
+
+        <Form.Group className="pb-3">
+          <Form.Control required id="message" type='rich-text' placeholder='Message' name="message" value={inputs.message} onChange={handleOnChange} />
+        </Form.Group>
+
+        <Button type="submit" disabled={status.submitting} data-gtm-button='contact form' className='evro-navy-btn pt-2 pb-2 pl-4 pr-4'>
+          {!status.submitting
+            ? !status.submitted
+              ? 'Submit'
+              : 'Submitted'
+            : 'Submitting...'}
         </Button>
+      </form>
+      {status.info.error && (
+        <div className="error">Error: {status.info.msg}</div>
+      )}
+      {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
       </Card.Body>
     </Card>
   );

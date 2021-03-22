@@ -31,17 +31,7 @@ function ContactForm() {
       })
     } 
   }
-/*   const resetForm = () => {
-    setState({
-        name: '',
-        email: '',
-        message: '',
-        subject: '',
-        sent: false,
-        buttonText: 'Submit',
-        err: ''
-    });
-  }; */
+
   const handleOnChange = (e) => {
     e.persist()
     setInputs((prev) => ({
@@ -65,7 +55,7 @@ function ContactForm() {
       .then((response) => {
         handleServerResponse(
           true,
-          'Thank you, your message has been submitted.'
+          ''
         )
         //resetForm();
         Router.push('/thank-you')
