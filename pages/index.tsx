@@ -3,8 +3,6 @@ import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import Sky from '../public/dc-skyline.svg';
 
-import '../styles/Home.module.css';
-
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

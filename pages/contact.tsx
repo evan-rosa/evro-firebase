@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import Typed from 'react-typed';
 import City from '../public/dc-map.svg';
-import '../styles/Contact.module.css';
 
 const Home = () => {
   return (
