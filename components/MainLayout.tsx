@@ -1,13 +1,25 @@
 import React from 'react';
+import {useEffect} from 'react';
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
+import Chat from './ChatWidget';
+import { addResponseMessage } from 'react-chat-widget';
 
 function MainLayout({ children }) {
   const router = useRouter()
+  useEffect(() => {
+    addResponseMessage('Welcome to this awesome chat!');
+  }, []);
+
+  const handleNewUserMessage = (newMessage) => {
+    console.log(`New message incoming! ${newMessage}`);
+    // Now send the message throught the backend API
+    addResponseMessage(response);
+  };
   return (
     <div>
       <Head>
@@ -73,6 +85,7 @@ function MainLayout({ children }) {
       <Container fluid>
         <main>{children}</main>
       </Container>
+      <Chat handleNewUserMessage={handleNewUserMessage}/>
     </div>
   );
 }
