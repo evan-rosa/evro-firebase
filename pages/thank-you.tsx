@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import Sky from '../public/dc-skyline.svg';
 
-import '../styles/Home.module.css';
-
 import MainLayout from '../components/MainLayout';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
