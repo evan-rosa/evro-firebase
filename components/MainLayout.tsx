@@ -26,7 +26,7 @@ function MainLayout({ children }) {
           className='shadow-sm bg-white'
         >
           <Navbar.Brand>
-            <Link href='https://evan-rosa.com'>
+            <Link href='/'>
               {router.pathname === '/' ? (<h1 className="h1"><div className='no-underline App-logo' data-gtm-head='logo'>
                 <span className='font-weight-lighter'>Evan</span> Rosa
               </div></h1>) : (<p className="h1"><div className='no-underline App-logo' data-gtm-head='logo'>
